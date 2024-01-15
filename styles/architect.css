@@ -12,9 +12,11 @@
     cursor: pointer;
     border: 0;
 }
-.text-light-gray{
+
+.text-light-gray {
     color: #727272;
 }
+
 .section-title {
     font-size: 2.8rem;
     font width: 700;
@@ -73,35 +75,83 @@ nav li a {
     margin-top: 20px;
     width: 100%;
 }
+
 /* Main styles */
-main{
+main {
     max-width: 1440px;
     margin: 70px auto;
 }
+
 /* Teams style */
-.teams-containar{
+.teams-containar {
     display: flex;
     align-items: center;
 }
-.teams-img-containar{
+
+.teams-img-containar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.teams-content{
+
+.teams-content {
     padding-left: 70px;
     padding-right: 70px;
 }
-.teams-title{
+
+.teams-title {
     font-size: 2.8rem;
 }
-.teams-title .quick-list{
+
+.teams-title .quick-list {
     font-weight: 500;
 }
-.teams-title .text-features{
+
+.teams-title .text-features {
     color: #FF900E;
     font-weight: 700;
 
+}
+
+/* facts section */
+.facts-card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.facts-card-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+
+
+}
+
+.facts-card-container .card-title-text-light-gray {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+
+.facts-card-container .card-stats {
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-containar{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.sponsors-img-containar img{
+width: 165px;
 }
 
 /* responsive mesia queries */
@@ -112,7 +162,10 @@ main{
     }
 
     nav,
-     .teams-containar{
+    .teams-containar,
+    .facts-card-container,
+    .sponsors-img-containar
+     {
 
         flex-direction: column;
     }
@@ -120,20 +173,28 @@ main{
     .banner img {
         width: 100%;
     }
-    .teams-img-containar{
+
+    .teams-img-containar {
         grid-template-columns: 1fr;
     }
-    .teams-content{
+
+    .teams-content,.facts-card-container  {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .facts-card-container {
+        gap: 40px;
     }
 
 }
 
 /* tablet devices */
 @media screen and (min-width:576px) and (max-width:960px) {
+
     nav,
-     .teams-containar{
+    .teams-containar,
+    .sponsors-img-containar
+     {
         flex-direction: column;
     }
 
